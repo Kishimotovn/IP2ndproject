@@ -1,0 +1,67 @@
+1:Nguyen Dinh Tuan Hoang:01/01/1994:Hanoi:ICT:B305:17
+2:Nguyen Van Quang:06/03/1994:Hanoi:ICT:B302:14
+3:Doan Bao Trung:10/09/1989:Hanoi:ICT:B301:16
+4:Pham Ha An:14/12/1995:Hanoi:ICT:B208:15
+5:Dao Hoang Anh:01/12/1995:Hanoi:ICT:B205:15
+6:Tran Phan Anh:21/05/1995:Hanoi:ICT:B205:15
+7:Nghiem Viet Cuong:01/01/1995:Hanoi:ICT:B205:15
+8:Dang Tran Khanh Duong:29/01/1995:Hanoi:ICT:B205:15
+9:Nguyen Hong Dang:09/02/1995:Hanoi:ICT:B205:15
+10:Nguyen Hong Duc:22/10/1995:Hanoi:ICT:B205:15
+11:Do Duc Hieu:23/10/1995:Hanoi:ICT:B205:15
+12:Tran Trung Hieu:07/06/1995:Hanoi:ICT:B205:15
+13:Nguyen Dang Hoa:04/11/1995:Hanoi:ICT:B205:15
+14:Vu Hoang:13/09/1995:Hanoi:ICT:B205:15
+15:Ta Quang Huy:13/09/1995:Hanoi:ICT:B205:15
+16:Nguyen Gia Khang:15/11/1995:Hanoi:ICT:B205:15
+17:Nguyen Nhu Khoa:22/09/1995:Hanoi:ICT:B205:15
+18:Dang Vu Lam:25/12/1995:Hanoi:ICT:B205:15
+19:Nguyen Thi Thu Linh:28/02/1991:Hanoi:ICT:B205:15
+20:Phung Ngoc Minh:02/08/1995:Hanoi:ICT:B205:15
+21:Cao Xuan Ngoc:10/09/1995:Hanoi:ICT:B204:7
+22:Nguyen Trong Nhan:10/01/1995:Hanoi:ICT:B203:8
+23:Nguyen Van Nhat:23/01/1995:Hanoi:ICT:B201:4
+24:Cao Anh Quan:22/12/1995:Hanoi:ICT:B205:9
+25:Nguyen Thanh Son:17/01/1995:Hanoi:ICT:B207:14
+26:Vu Tung son:03/10/1995:Hanoi:Bio:B206:17
+27:Nguyen Duc Thang:08/02/1995:Hanoi:ICT:B207:15
+28:Nguyen Mai Trang:13/09/1995:Hanoi:ICT:B202:13
+29:Hoang Anh Tu:10/02/1995:Hanoi:ICT:B208:14
+30:Do Quoc Tuan:26/06/1995:Hanoi:ICT:B207:15
+31:ABCxy lskjfslf:09/10/1995:Hanoi:ICT:B206:14
+32:Nguyen Minh Tuan:24/11/1995:Hanoi:ICT:B203:15
+33:Do Son Tung:06/10/1995:Hanoi:ICT:B205:17
+1:Nguyen Dinh Tuan Hoang:01/01/1994:Hanoi:ICT:B305:17
+2:Nguyen Van Quang:06/03/1994:Hanoi:ICT:B302:14
+3:Doan Bao Trung:10/09/1989:Hanoi:ICT:B301:16
+4:Pham Ha An:14/12/1995:Hanoi:ICT:B208:15
+5:Dao Hoang Anh:01/12/1995:Hanoi:ICT:B205:15
+6:Tran Phan Anh:21/05/1995:Hanoi:ICT:B205:15
+7:Nghiem Viet Cuong:01/01/1995:Hanoi:ICT:B205:15
+8:Dang Tran Khanh Duong:29/01/1995:Hanoi:ICT:B205:15
+9:Nguyen Hong Dang:09/02/1995:Hanoi:ICT:B205:15
+10:Nguyen Hong Duc:22/10/1995:Hanoi:ICT:B205:15
+11:Do Duc Hieu:23/10/1995:Hanoi:ICT:B205:15
+12:Tran Trung Hieu:07/06/1995:Hanoi:ICT:B205:15
+13:Nguyen Dang Hoa:04/11/1995:Hanoi:ICT:B205:15
+14:Vu Hoang:13/09/1995:Hanoi:ICT:B205:15
+15:Ta Quang Huy:13/09/1995:Hanoi:ICT:B205:15
+16:Nguyen Gia Khang:15/11/1995:Hanoi:ICT:B205:15
+17:Nguyen Nhu Khoa:22/09/1995:Hanoi:ICT:B205:15
+18:Dang Vu Lam:25/12/1995:Hanoi:ICT:B205:15
+19:Nguyen Thi Thu Linh:28/02/1991:Hanoi:ICT:B205:15
+20:Phung Ngoc Minh:02/08/1995:Hanoi:ICT:B205:15
+21:Cao Xuan Ngoc:10/09/1995:Hanoi:ICT:B204:7
+22:Nguyen Trong Nhan:10/01/1995:Hanoi:ICT:B203:8
+23:Nguyen Van Nhat:23/01/1995:Hanoi:ICT:B201:4
+24:Cao Anh Quan:22/12/1995:Hanoi:ICT:B205:9
+25:Nguyen Thanh Son:17/01/1995:Hanoi:ICT:B207:14
+26:Vu Tung son:03/10/1995:Hanoi:Bio:B206:17
+27:Nguyen Duc Thang:08/02/1995:Hanoi:ICT:B207:15
+28:Nguyen Mai Trang:13/09/1995:Hanoi:ICT:B202:13
+29:Hoang Anh Tu:10/02/1995:Hanoi:ICT:B208:14
+30:Do Quoc Tuan:26/06/1995:Hanoi:ICT:B207:15
+31:ABCxy lskjfslf:09/10/1995:Hanoi:ICT:B206:14
+32:Nguyen Minh Tuan:24/11/1995:Hanoi:ICT:B203:15
+33:Do Son Tung:06/10/1995:Hanoi:ICT:B205:17
+67:sdjkahfaslh kjadshfkjahg:dfhgksdhg:sdfgkjshdf:sdfjhgk:dakjshf:0
