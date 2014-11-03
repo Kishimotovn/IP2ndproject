@@ -16,8 +16,8 @@ class Person{
 		Person();
 		Person(int i_id, string i_fname, string i_dob, string i_addr);
 		void Show();
-		void Setfname(string n_new);
-		void Setdob(string n_dOB);
+		void Setfname(string n_fname);
+		void Setdob(string n_dob);
 		void Setaddr(string n_addr);
 		int Getid();
 		string Getfname();

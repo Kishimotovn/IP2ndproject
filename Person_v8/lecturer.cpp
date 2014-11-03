@@ -13,7 +13,7 @@ Lecturer::Lecturer(int i_id, string i_fname, string i_dob, string i_addr, string
 }
 
 void Lecturer::Show(){
-	cout<<id<<":"<<fname<<":"<<dob<<":"<<addr<<"."<<field<<":"<<lecyear<<"."<<univ<<"\n";
+	cout<<id<<":"<<fname<<":"<<dob<<":"<<addr<<":"<<field<<":"<<lecyear<<":"<<univ<<"\n";
 }
 
 void Lecturer::Setfield(string n_field){

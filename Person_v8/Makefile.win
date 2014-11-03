@@ -4,11 +4,11 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = ../Person_v1/person.o ../Person_v1/person_test.o person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o course.o course_test.o
-LINKOBJ  = ../Person_v1/person.o ../Person_v1/person_test.o person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o course.o course_test.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+OBJ      = person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o person.o course.o course_test.o lecturer.o lecturer_test.o subjects.o subjects_test.o
+LINKOBJ  = person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o person.o course.o course_test.o lecturer.o lecturer_test.o subjects.o subjects_test.o
+LIBS     = -L"E:/Dev-Cpp/MinGW64/lib" -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
 BIN      = person.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
@@ -23,12 +23,6 @@ clean: clean-custom
 
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
-
-../Person_v1/person.o: ../Person_v1/person.cpp
-	$(CPP) -c ../Person_v1/person.cpp -o ../Person_v1/person.o $(CXXFLAGS)
-
-../Person_v1/person_test.o: ../Person_v1/person_test.cpp
-	$(CPP) -c ../Person_v1/person_test.cpp -o ../Person_v1/person_test.o $(CXXFLAGS)
 
 person_lib_test.o: person_lib_test.cpp
 	$(CPP) -c person_lib_test.cpp -o person_lib_test.o $(CXXFLAGS)
@@ -45,8 +39,23 @@ student_test.o: student_test.cpp
 student_lib_test.o: student_lib_test.cpp
 	$(CPP) -c student_lib_test.cpp -o student_lib_test.o $(CXXFLAGS)
 
+person.o: person.cpp
+	$(CPP) -c person.cpp -o person.o $(CXXFLAGS)
+
 course.o: course.cpp
 	$(CPP) -c course.cpp -o course.o $(CXXFLAGS)
 
 course_test.o: course_test.cpp
 	$(CPP) -c course_test.cpp -o course_test.o $(CXXFLAGS)
+
+lecturer.o: lecturer.cpp
+	$(CPP) -c lecturer.cpp -o lecturer.o $(CXXFLAGS)
+
+lecturer_test.o: lecturer_test.cpp
+	$(CPP) -c lecturer_test.cpp -o lecturer_test.o $(CXXFLAGS)
+
+subjects.o: subjects.cpp
+	$(CPP) -c subjects.cpp -o subjects.o $(CXXFLAGS)
+
+subjects_test.o: subjects_test.cpp
+	$(CPP) -c subjects_test.cpp -o subjects_test.o $(CXXFLAGS)

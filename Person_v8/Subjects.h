@@ -7,7 +7,6 @@
 using namespace std;
 
 class Subject{
-	protected:
 		string id;
 		string sname;
 		string stype;
@@ -15,7 +14,6 @@ class Subject{
 		string presq;
 	public:
 		Subject();
-        //Subject();
 		Subject(string i_id, string i_sname, string i_stype, short i_credit, string i_presq);
 		void Show();
 		void Setid(string n_id);

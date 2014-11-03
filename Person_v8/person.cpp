@@ -25,9 +25,9 @@
 	}
 	
 	//Set info of person
-	void Person::Setfname(string n_name)
+	void Person::Setfname(string n_fname)
 	{
-		fname = n_name;
+		fname = n_fname;
 	}
 	
 	void Person::Setdob(string n_dob)
