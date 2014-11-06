@@ -20,8 +20,10 @@ class Subject{
 		void Setsname(string n_sname);
 		void Setcredit(short n_credit);
 		void Setstype(string n_stype);
-		short Getcredit();
 		void Setpresq(string n_presq);
+		
+		string Getid();
+		short Getcredit();
 		string Getsname();
 		string Getstype();
 		string Getpresq();

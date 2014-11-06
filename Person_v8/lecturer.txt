@@ -1,0 +1,14 @@
+1:Nguyen Van Nhat:6/9/69:Hanoi:MATHS:5:Hanu
+2:Nguyen Phuong Nhung:26/09/95:Hanoi:LAW:3:VNUHN
+3:Nguyen Van Nhat:6/9/69:Hanoi:PHYSICS:5:Hanu
+4:Nguyen Phuong Nhung:26/09/95:Hanoi:MATHS:3:VNUHN
+5:Nguyen Van Nhat:6/9/69:Hanoi:CHEMS:5:Hanu
+6:Nguyen Phuong Nhung:26/09/95:Hanoi:PHYSICS:3:VNUHN
+7:Nguyen Van Nhat:6/9/69:Hanoi:ICT:5:Hanu
+8:Nguyen Phuong Nhung:26/09/95:Hanoi:BIO:3:VNUHN
+9:Nguyen Van Nhat:6/9/69:Hanoi:ICT:5:Hanu
+10:Nguyen Phuong Nhung:26/09/95:Hanoi:MATH:3:VNUHN
+11:Nguyen Van Nhat:6/9/69:Hanoi:ICT:5:Hanu
+12:Nguyen Phuong Nhung:26/09/95:Hanoi:LAW:3:VNUHN
+13:Nguyen Van Nhat:6/9/69:Hanoi:MATHs:5:Hanu
+14:Nguyen Phuong Nhung:26/09/95:Hanoi:ICT:3:VNUHN

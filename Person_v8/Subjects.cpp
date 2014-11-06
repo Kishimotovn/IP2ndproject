@@ -49,6 +49,13 @@ using namespace std;
 		presq = n_presq;
 	}
 
+
+	string Subject::Getid()
+	{
+		return id;
+	}
+	
+	
 	string Subject::Getsname()
 	{
 		return sname;

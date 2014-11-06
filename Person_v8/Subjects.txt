@@ -1,0 +1,9 @@
+ICT101:CPrograming:Bachelor:3:None
+ICT102:OPPrograming:Bachelor:3:ICT101
+PHYS101:Nope:Bachelor:4:None
+PHYS102:MoreNope:Bachelor:3:PHYS101
+CHEMS101:Noooope:Bachelor:5:None
+CHEMS102:NopeVille:PostGrad:4:CHEMS101
+MATH101:There is no MATH102 so don't worry:Bachelor:5:None
+MATH102:I lied:Bachelor:4:MATH101
+CALS101:Wellcome to jackass:Bachelor:3:MATH102

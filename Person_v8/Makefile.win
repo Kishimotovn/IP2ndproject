@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o person.o course.o course_test.o lecturer.o lecturer_test.o subjects.o subjects_test.o
-LINKOBJ  = person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o person.o course.o course_test.o lecturer.o lecturer_test.o subjects.o subjects_test.o
+OBJ      = person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o person.o course.o course_test.o lecturer.o lecturer_test.o subjects.o subjects_test.o lecturer_lib_test.o course_lib_test.o subject_lib_test.o CheckTimetable.o
+LINKOBJ  = person_lib_test.o person_lib.o student.o student_test.o student_lib_test.o person.o course.o course_test.o lecturer.o lecturer_test.o subjects.o subjects_test.o lecturer_lib_test.o course_lib_test.o subject_lib_test.o CheckTimetable.o
 LIBS     = -L"E:/Dev-Cpp/MinGW64/lib" -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
 CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
@@ -59,3 +59,15 @@ subjects.o: subjects.cpp
 
 subjects_test.o: subjects_test.cpp
 	$(CPP) -c subjects_test.cpp -o subjects_test.o $(CXXFLAGS)
+
+lecturer_lib_test.o: lecturer_lib_test.cpp
+	$(CPP) -c lecturer_lib_test.cpp -o lecturer_lib_test.o $(CXXFLAGS)
+
+course_lib_test.o: course_lib_test.cpp
+	$(CPP) -c course_lib_test.cpp -o course_lib_test.o $(CXXFLAGS)
+
+subject_lib_test.o: subject_lib_test.cpp
+	$(CPP) -c subject_lib_test.cpp -o subject_lib_test.o $(CXXFLAGS)
+
+CheckTimetable.o: CheckTimetable.cpp
+	$(CPP) -c CheckTimetable.cpp -o CheckTimetable.o $(CXXFLAGS)

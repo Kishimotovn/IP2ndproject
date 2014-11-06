@@ -15,7 +15,7 @@ class Course
 	string time_starth;
 	string time_endh;
 	string time_date;
-	string time = time_starth + ":"+ time_endh +":"+ time_date;
+	string time;
 	
 	public:
 		Course();
@@ -40,5 +40,6 @@ class Course
 		string Gettime();
 		
 		void Show();
+		void Showtt();
 };
 #endif

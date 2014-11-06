@@ -98,3 +98,8 @@
 	{
 		cout<<sid<<":"<<lid<<":"<<sem<<":"<<room<<":"<<time_starth<<":"<<time_endh<<":"<<time_date<<endl;
 	}
+	
+	void Course::Showtt()
+	{
+		cout<<time_date<<" from "<<time_starth<< " to " <<time_endh<<": "<<sid<<" in room: "<<room<<endl;
+	}
