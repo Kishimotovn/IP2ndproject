@@ -1,0 +1,11 @@
+M1:3:1:Hall Bulding:9h:11h:Saturday:Good
+P2:1:1:710:9h:12h:Wednesday:Good
+M3:1:1:710:9h:12h:Wednesday:Nope
+P4:4:1:710:14h:17:Tuesday:Hard as fk
+MS5:5:1:Hall Bulding:8h:12h:Monday:None
+MS6:6:1:Hall Bulding:14h:17h:Monday:English
+P7:8:1:701:9h:12h:Friday:Soon
+P8:10:1:701:9h:12h:Thursday:Easy
+M9:7:2:710:14h:17h:Thursday:Noope
+P10:12:2:710:14:17h:Saturday:me likey
+M12:8:1:701:9h:12h:Friday:wtf is this

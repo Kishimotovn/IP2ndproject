@@ -1,0 +1,497 @@
+#ifndef LECTURER_LIB_H_
+#define LECTURER_LIB_H_
+
+#include "Lecturer.h"
+
+#include<string>
+#include<fstream>
+#include<sstream>
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+#include<cstring>
+
+using namespace std;
+
+//Link list
+struct LNode 
+{
+	LNode *next;
+	Lecturer l;
+};
+
+LNode *Lhead, *Ltail;
+
+
+void LInitQueue()
+{
+	Lhead = Ltail = NULL;
+}
+
+void LPush(Lecturer n_l)
+{
+	LNode *el;
+	el = new LNode;
+	el -> l = n_l;
+	el -> next = NULL;
+	if(Lhead == NULL)
+	{
+		Lhead = Ltail = el; 
+	}
+	else
+	{
+		Ltail ->next = el;
+		Ltail = el;
+	}
+}
+
+int LPop()
+{
+	LNode *temp;
+	Lecturer d_l;
+	
+	if(Lhead == NULL)
+	{
+		cout<<"List empty!.\n";
+	}
+	
+	temp = Lhead;
+	Lhead = temp -> next;
+	d_l = temp -> l;
+	delete temp; 
+}
+
+void LAddLecturer(string l_detail)
+{
+	string temp, i_fname, i_dob, i_addr, i_field, i_univ;
+	int i_id;
+	short i_lecyear;
+	
+	int mark = l_detail.find(":");
+	i_id = atoi(l_detail.substr(0,mark).c_str());
+	
+	temp = l_detail.substr(mark+1);
+	mark = temp.find(":");
+	i_fname = temp.substr(0,mark);
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_dob = temp.substr(0,mark);
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_addr = temp.substr(0,mark);
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_field = temp.substr(0,mark);
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_lecyear = atoi(temp.substr(0,mark).c_str());
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_univ = temp.substr(0,mark).c_str();
+	
+	Lecturer l(i_id, i_fname, i_dob, i_addr, i_field, i_lecyear, i_univ);
+	LPush(l);
+}
+
+void LReadFile(string file)
+{
+	ifstream fin;
+	fin.open(file.c_str());
+	if(!fin.is_open())
+	{
+		cout<<"Cant read the file.\n";
+		exit(1);
+	}
+	else{
+		string temp = "";
+		while (getline(fin,temp))
+		{
+			LAddLecturer(temp);
+		}
+		fin.close();
+	}
+}
+
+void LSaveFile(string file)
+{
+	ofstream fout;
+	fout.open(file.c_str());
+	LNode *q;
+	q = Lhead;
+	while(q != NULL)
+	{
+		fout<<q->l.Getid()<<":"<<q->l.Getfname()<<":"<<q->l.Getdob()<<":"<<q->l.Getaddr()<<":"<<q->l.Getfield()<<":"<<q->l.Getlecyear()<<":"<<q->l.Getuniv()<<endl;
+		q = q -> next;
+	}
+	fout.close();
+}
+
+void LListShow()
+{
+	LNode *q;
+	q = Lhead;
+	if(q == NULL)
+	{
+		cout<<"List epmty.\n";
+	}
+	else
+	{
+		do
+		{
+			q -> l.Show();
+			q = q->next;
+		}while (q != NULL);
+	}
+}
+
+void Searchlecturer()
+{
+	string info;
+	cout << "Input a value that you would like to search: ";
+	std::getline(cin,info);
+	ofstream fout;
+	string test = "searchidlist.txt";
+	fout.open(test.c_str());
+	LNode *q;
+	q = Lhead;
+	int count;
+	if(q == NULL)
+	{
+		cout<<"List epmty.\n";
+	}
+	else
+	{
+		//find name
+		do
+		{
+			if (q->l.Getfname().find(info) != string::npos) 
+			{
+    			q->l.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find dob
+		q = Lhead;
+		do
+		{
+			if (q->l.Getdob().find(info) != string::npos) 
+			{
+    			q->l.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find field
+		q = Lhead;
+		do
+		{
+			if (q->l.Getfield().find(info) != string::npos) 
+			{
+    			q->l.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find addr
+		q = Lhead;
+		do
+		{
+			if (q->l.Getaddr().find(info) != string::npos) 
+			{
+    			q->l.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find lecyear
+		q = Lhead;
+		do
+		{
+			if ((static_cast<ostringstream*>( &(ostringstream() << q->l.Getlecyear()) )->str()).find(info) != string::npos) 
+			{
+    			q->l.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find uni
+		q = Lhead;
+		do
+		{
+			if (q->l.Getuniv().find(info) != string::npos) 
+			{
+    			q->l.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+	}
+	fout.close();
+	if(count == 0)
+	{
+		cout << "There is not any lecturer that you desire so please search again !\n";
+		Searchlecturer();
+	}
+}
+
+bool LCheckAns()
+{ 
+	string ans;
+	cin >> ans;
+	cin.clear();
+	cin.ignore(100, '\n');
+	if(ans == "y")
+		return true;
+	else if(ans == "n")
+		return false;
+	else
+	{
+		cout<<"Input y or n: ";
+		LCheckAns();	
+	}			
+}
+
+int FindLecturerId()
+{
+	ifstream fin;
+	string file = "searchidlist.txt";
+	fin.open(file.c_str());
+	int _id;
+	LNode *q;
+	
+	cout<<"Input desired lecturer's id: ";
+	cin >> _id;
+	cin.clear();
+	cin.ignore(100, '\n');
+	
+	//find id
+	t_lecturer = Lhead;
+	do
+	{
+		if (t_lecturer->l.Getid() == _id) 
+		{
+			string temp = "";
+			while (getline(fin,temp))
+			{
+				if(_id == atoi(temp.c_str()))
+				{
+					t_lecturer->l.Show();
+					return t_lecturer->l.Getid();
+				}
+			}
+		}
+		t_lecturer = t_lecturer->next;
+	}while (t_lecturer != NULL);
+	fin.close();
+	return -1;
+}
+
+int FinalCheck()
+{
+	int temp;
+	temp = FindLecturerId();
+	if(temp != -1)
+	{
+		cout<<"Is this your lecturer? [Y/N]: ";
+		if(LCheckAns())
+		{
+			return temp;
+		}
+		else
+		{
+			cout<<"Do you want to find again? [Y/N]";
+			if(LCheckAns())
+				return LFinalCheck();
+		}		
+	}
+	else
+	{
+		cout<<"Can not find or not in list! Do you want to find again? [Y/N]: ";
+		if(LCheckAns())
+			LFinalCheck();
+	}
+	return -1;
+}
+
+void LChangeProperty()
+{
+	cout << "Which property do you want to change?\n" << "[1]: name\n" << "[2]: dob\n" << "[3]: address\n" << "[4]: field\n" << "[4]: lecture year\n" << "[6]: university\n";
+	int prop = LCheckAnsProperties();
+	cout << "Input the value that you would like to change: ";
+	string i_value;
+	std::getline(cin, i_value);
+	switch(prop)
+	{
+		case 1:
+			m_lecturer.Setfname(i_value);
+			break;
+		case 2:
+			m_lecturer.Setdob(i_value);
+			break;
+		case 3:
+			m_lecturer.Setaddr(i_value);
+			break;
+		case 4:
+			m_lecturer.Setfield(i_value);
+			break;
+		case 5:
+			m_lecturer.Setlecyear(i_value);
+			break;
+		case 6:
+			m_lecturer.Setuniv(i_value);
+			break;
+		default:
+			break;
+	}
+	cout << "Change more? [Y/N]: ";
+	if(LCheckAns())
+		LChangeProperty();
+}
+
+void LCoreModify()
+{
+	t_lecturer->l.Show();
+	LChangeProperty();
+	cout << "This is the final result: \n";
+	m_lecturer.Show();
+	cout << "You wanna keep the changes? [Y/N]: ";
+//	cin.clear();
+//	cin.ignore(100, '\n');
+	if(LCheckAns())
+	{
+		t_lecturer -> l = m_lecturer;
+		LSaveFile("b.txt");
+		LReadFile("b.txt");
+		cout<<"Saved changes!";
+	}
+	else
+	{
+		m_lecturer = t_lecturer->l;
+		cout<<"Rechange? ";
+		if(LCheckAns())
+		{
+			LCoreModify(); 
+		}
+	}
+}
+
+void Modifylecturer()
+{
+	int i_id;
+	Searchlecturer();
+	i_id = LFinalCheck();
+	if(i_id != -1)
+	{
+		m_lecturer = t_lecturer -> l;
+		cout << "Ok, now modify this lecturer:\n";
+		LCoreModify();
+		cout << "\nChange another lecturer? [Y/N]: ";
+		if(LCheckAns())
+		{
+			Modifylecturer();
+		}
+	}
+	cout << "Done!\n";
+}
+
+int CountLecturerNumber()
+{
+	int lecturercount = 0;
+	LNode *q;
+	q = Lhead;
+	do
+	{
+		lecturercount +=1;
+		q = q->next;
+	}while (q != NULL);
+	return lecturercount;
+}
+
+int LCheckRepetitive(Lecturer x)
+{
+	int counter = 0;
+	LNode *q;
+	q = Lhead;
+	do
+	{
+		if((q->l.Getfname() == x.Getfname()) && (q->l.Getdob() == x.Getdob()) 
+		&& (q->l.Getaddr() == x.Getaddr()) && (q->l.Getfield() == x.Getfield()) && (q->l.Getlecyear() == x.Getlecyear()) && (q->l.Getuniv() == x.Getuniv()))
+		{
+			counter += 1;
+			cout<< "There is a repetitive:" << "\n";
+			q->l.Show();
+		} 
+		q = q->next;
+	}while (q != NULL);
+	return counter;
+}
+
+void AddnewLecturer()
+{
+	int i_id = CountLecturerNumber() + 1;
+	string i_name, i_dob, i_addr, i_field, i_univ;
+	short i_lecyear;
+	Lecturer n_l;
+	cout << "Input new lecturer's info:"<<"\n";
+	cout << "Input name: ";
+	getline(cin, i_fname);
+	
+	cout << "Input dob: ";
+	getline(cin, i_dob);
+	
+	cout << "Input addr: ";
+	getline(cin, i_addr);
+	
+	cout << "Input field: ";
+	getline(cin, i_field);
+	
+	cout << "Input lecture year: ";
+	getline(cin, i_lecyear);
+	
+	cout << "Input university: ";
+	getline(cin, i_univ);
+	
+	n_l.Setid(i_id);
+	n_l.Setfname(i_fname);
+	n_l.Setdob(i_dob);
+	n_l.Setaddr(i_addr);
+	n_l.Setfield(i_field);
+	n_l.Setlecyear(i_lecyear);
+	n_l.Setuniv(i_univ);
+	
+	if(LCheckRepetitive(n_l) == 0)
+	{
+		LPush(n_l);
+		LSaveFile("Lecturer.txt");
+		cout << "Lecuter's info is added\n";
+		cout << "new Lecturer info:\n";
+		n_l.Show();
+	}	
+	else
+	{
+		cout<<"There has been repeatitives!" << "Redo? [Y/N]: ";
+		if(LCheckAns())
+		{
+			AddnewLecturer();
+		}
+	}
+}
+
+#endif

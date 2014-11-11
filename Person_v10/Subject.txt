@@ -1,0 +1,12 @@
+M1:Probability & Statistic:Math:3:None
+P2:Imperative Programming:Programming:4:P7
+M3:Analysis & Algebraic Struture:Math:3:M9
+P4:Algorithms & Data Structure:Programming:4:None
+MS5:Contract Law:MS:2:None
+MS6:Project Management:MS:1:None
+P7:Object Oriented Programming:Programming:4:None
+P8:C Programming:Programming:Programming:3:P2
+M9:Discrete Mathematics:Math:3:Nones
+P10:ISA:Programming:4:None
+P11:Java:Programming:3:None
+M12:Decrete Mathematics:Math:3:None

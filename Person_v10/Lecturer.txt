@@ -1,0 +1,12 @@
+1:Pham Ngoc Hung:13/04/1979:Quang Binh:ICT:15:HNU
+2:Pham Trieu Duong:28/04/1982:Hanoi:Math:14:HNU
+3:Bruno Tuffin:29/08/1978:France:Probability & Statistic:9:FNU
+4:Nguyen Xuan Hoai:13/07/1985:Hanoi:Data Structure:HNU
+5:Vu Van Ngoc:18/12/1976:Hanoi:Law:NEU
+6:Vu Ngoc Diep:19/10/1983:Hanoi:Project Management:FTU
+7:Le Thanh Sach:09/08/1983:Hanoi:Discrete Mathematics:NTU
+8:Tran Thi Minh Chau:17/09/1985:Hai Phong:Object Oriented  Programming:HUST
+9:Phung Phan Anh:13/07/1986:Hanoi:Algorithm:USTH
+10:Tran Ha An:02/08/1990:Hanoi:C Programming:USTH
+11:Pham Ngoc Minh:13/12/1993:Hanoi:Java Programming:USTH
+12:Hoang Huong Loan:24/10/1986:Hanoi:ISA:USTH

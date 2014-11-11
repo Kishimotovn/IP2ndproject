@@ -1,0 +1,449 @@
+#ifndef Subject_LIB_H_
+#define Subject_LIB_H_
+
+#include "Subjects.h"
+#include "common.h"
+
+#include<string>
+#include<fstream>
+#include<sstream>
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+#include<cstring>
+
+using namespace std;
+
+//Link list
+struct SubNode 
+{
+	SubNode *next;
+	Subject sub;
+};
+
+SubNode *Subhead, *Subtail;
+
+
+void SubInitQueue()
+{
+	Subhead = Subtail = NULL;
+}
+
+void SubPush(Subject n_sub)
+{
+	SubNode *el;
+	el = new SubNode;
+	el -> sub = n_sub;
+	el -> next = NULL;
+	if(Subhead == NULL)
+	{
+		Subhead = Subtail = el; 
+	}
+	else
+	{
+		Subtail ->next = el;
+		Subtail = el;
+	}
+}
+
+int SubPop()
+{
+	SubNode *temp;
+	Subject d_sub;
+	
+	if(Subhead == NULL)
+	{
+		cout<<"List empty!.\n";
+	}
+	
+	temp = Subhead;
+	Subhead = temp -> next;
+	d_sub = temp -> sub;
+	delete temp; 
+}
+
+void SubAddSubject(string sub_detail)
+{
+	string temp, i_id, i_sname, i_stype, i_presq;
+	short  i_credit;
+	
+	int mark = sub_detail.find(":");
+	i_id = sub_detail.substr(0,mark);
+	
+	temp = sub_detail.substr(mark+1);
+	mark = temp.find(":");
+	i_sname = temp.substr(0,mark);
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_stype = temp.substr(0,mark);
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_credit = atoi(temp.substr(0,mark).c_str());
+	
+	temp = temp.substr(mark+1);
+	mark = temp.find(":");
+	i_presq = temp.substr(0,mark);
+	
+	Subject sub(i_id, i_sname, i_stype, i_credit, i_presq);
+	SubPush(sub);
+}
+
+void SubReadFile(string file)
+{
+	ifstream fin;
+	fin.open(file.c_str());
+	if(!fin.is_open())
+	{
+		cout<<"Cant read the file.\n";
+		exit(1);
+	}
+	else{
+		string temp = "";
+		while (getline(fin,temp))
+		{
+			AddSubject(temp);
+		}
+		fin.close();
+	}
+}
+
+void SubSaveFile(string file)
+{
+	ofstream fout;
+	fout.open(file.c_str());
+	SubNode *q;
+	q = Subhead;
+	while(q != NULL)
+	{
+		fout<<q->sub.Getid()<<":"<<q->sub.Getsname()<<":"<<q->sub.Getstype()<<":"<<q->sub.Getcredit()<<":"<<q->sub.Getpresq()<<endl;
+		q = q -> next;
+	}
+	fout.close();
+}
+
+void SubListShow()
+{
+	SubNode *q;
+	q = Subhead;
+	if(q == NULL)
+	{
+		cout<<"List epmty.\n";
+	}
+	else
+	{
+		do
+		{
+			q -> sub.Show();
+			q = q->next;
+		}while (q != NULL);
+	}
+}
+
+void Searchsubject()
+{
+	string info;
+	cout << "Input a value that you would like to search: ";
+	std::getline(cin,info);
+	ofstream fout;
+	string test = "searchidlist.txt";
+	fout.open(test.c_str());
+	SubNode *q;
+	q = Subhead;
+	int count;
+	if(q == NULL)
+	{
+		cout<<"List epmty.\n";
+	}
+	else
+	{
+		//find subject name
+		do
+		{
+			if (q->sub.Getsname().find(info) != string::npos) 
+			{
+    			q->sub.Show();
+    			fout<<q->sub.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find subject type
+		q = Subhead;
+		do
+		{
+			if (q->sub.Getstype().find(info) != string::npos) 
+			{
+    			q->sub.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find credit
+		q = Lhead;
+		do
+		{
+			if ((static_cast<ostringstream*>( &(ostringstream() << q->sub.Getcredit()) )->str()).find(info) != string::npos) 
+			{
+    			q->sub.Show();
+    			fout<<q->l.Getid()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+		
+		//find pre-subject
+		q = Lhead;
+		do
+		{
+			if (q->sub.Getpresq().find(info) != string::npos) 
+			{
+    			q->sub.Show();
+    			fout<<q->sub.Getpresq()<<endl;
+    			count += 1;
+			}
+			q = q->next;
+		}while (q != NULL);
+	}
+	fout.close();
+	if(count == 0)
+	{
+		cout << "There is not any subject that you desire so please search again !\n";
+		Searchsubject();
+	}
+}
+
+bool CheckAns()
+{ 
+	string ans;
+	cin >> ans;
+	cin.clear();
+	cin.ignore(100, '\n');
+	if(ans == "y")
+		return true;
+	else if(ans == "n")
+		return false;
+	else
+	{
+		cout<<"Input y or n: ";
+		CheckAns();	
+	}			
+}
+
+int FindSubjectId()
+{
+	ifstream fin;
+	string file = "searchidlist.txt";
+	fin.open(file.c_str());
+	int _id;
+	Node *q;
+	
+	cout<<"Input desired lecturer's id: ";
+	cin >> _id;
+	cin.clear();
+	cin.ignore(100, '\n');
+	
+	//find id
+	t_subject = Lhead;
+	do
+	{
+		if (t_subject->sub.Getid() == _id) 
+		{
+			string temp = "";
+			while (getline(fin,temp))
+			{
+				if(_id == atoi(temp.c_str()))
+				{
+					t_subject->sub.Show();
+					return t_subject->l.Getid();
+				}
+			}
+		}
+		t_subject = t_subject->next;
+	}while (t_subject != NULL);
+	fin.close();
+	return -1;
+}
+
+int SubFinalCheck()
+{
+	int temp;
+	temp = FindSubjectId();
+	if(temp != -1)
+	{
+		cout<<"Is this your subject? [Y/N]: ";
+		if(CheckAns())
+		{
+			return temp;
+		}
+		else
+		{
+			cout<<"Do you want to find again? [Y/N]";
+			if(CheckAns())
+				return SubFinalCheck();
+		}		
+	}
+	else
+	{
+		cout<<"Can not find or not in list! Do you want to find again? [Y/N]: ";
+		if(CheckAns())
+			SubFinalCheck();
+	}
+	return -1;
+}
+
+void SubChangeProperty()
+{
+	cout << "Which property do you want to change?\n" << "[1]: subject name\n" << "[2]: subject type\n" << "[3]: credit\n" << "[4]: presubject\n";
+	int prop = CheckAnsProperties();
+	cout << "Input the value that you would like to change: ";
+	string i_value;
+	std::getline(cin, i_value);
+	switch(prop)
+	{
+		case 1:
+			m_subject.Setsname(i_value);
+			break;
+		case 2:
+			m_subject.Setstype(i_value);
+			break;
+		case 3:
+			m_subject.Setcredit(i_value);
+			break;
+		case 4:
+			m_subject.Setpresq(i_value);
+			break;
+		default:
+			break;
+	}
+	cout << "Change more? [Y/N]: ";
+	if(CheckAns())
+		SubChangeProperty();
+}
+
+void SubCoreModify()
+{
+	t_subject->sub.Show();
+	SubChangeProperty();
+	cout << "This is the final result: \n";
+	m_subject.Show();
+	cout << "You wanna keep the changes? [Y/N]: ";
+//	cin.clear();
+//	cin.ignore(100, '\n');
+	if(CheckAns())
+	{
+		t_subject -> l = m_subject;
+		SubSaveFile("b.txt");
+		SubReadFile("b.txt");
+		cout<<"Saved changes!";
+	}
+	else
+	{
+		m_subject = t_subject->sub;
+		cout<<"Rechange?";
+		if(CheckAns())
+		{
+			SubCoreModify(); 
+		}
+	}
+}
+
+void Modifysubject()
+{
+	int i_id;
+	Searchsubject();
+	i_id = SubFinalCheck();
+	if(i_id != -1)
+	{
+		m_subject = t_subject -> sub;
+		cout << "Ok, now modify this subject:\n";
+		SubCoreModify();
+		cout << "\nChange another subject? [Y/N]: ";
+		if(CheckAns())
+		{
+			Modifysubject();
+		}
+	}
+	cout << "Done!\n";
+}
+
+int CountSubjectNumber()
+{
+	int subjectcount = 0;
+	SubNode *q;
+	q = Subhead;
+	do
+	{
+		subjectcount +=1;
+		q = q->next;
+	}while (q != NULL);
+	return subjectcount;
+}
+
+int SubCheckRepetitive(Subject x)
+{
+	int counter = 0;
+	SubNode *q;
+	q = Subhead;
+	do
+	{
+		if((q->sub.Getsname() == x.Getsname()) && (q->sub.Getstype() == x.Getstype()) 
+		&& (q->sub.Getcredit() == x.Getcredit()) && (q->sub.Getpresq() == x.Getpresq()))
+		{
+			counter += 1;
+			cout<< "There is a repetitive:" << "\n";
+			q->sub.Show();
+		} 
+		q = q->next;
+	}while (q != NULL);
+	return counter;
+}
+
+void AddnewSubject()
+{
+	int i_id = CountSubjectNumber() + 1;
+	string i_sname, i_stype, i_presq;
+	short i_credit;
+	Subject n_sub;
+	cout << "Input new Subject's info:"<<"\n";
+	cout << "Input subject name: ";
+	getline(cin, i_sname);
+	
+	cout << "Input subject type: ";
+	getline(cin, i_stype);
+	
+	cout << "Input credit: ";
+	getline(cin, i_credit;
+	
+	cout << "Input presubject ";
+	getline(cin, i_presq);
+	
+	n_sub.Setid(i_id);
+	n_sub.Setsname(i_sname);
+	n_sub.Setstype(i_stype);
+	n_sub.Setcredit(i_credit);
+	n_sub.Setpresq(i_presq);
+	
+	if(SubCheckRepetitive(n_l) == 0)
+	{
+		SubPush(n_sub);
+		SubSaveFile("Subject.txt");
+		cout << "Subject's info is added\n";
+		cout << "new Subject info:\n";
+		n_sub.Show();
+	}
+	else
+	{
+		cout<<"There has been repeatitives!" << "Redo? [Y/N]: ";
+		if(CheckAns())
+		{
+			AddnewSubject();
+		}
+	}
+}
+
+#endif
