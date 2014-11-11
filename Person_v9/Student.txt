@@ -1,0 +1,60 @@
+1:Nguyen Dinh Tuan Hoang:01/01/1994:Hanoi:ICT:B305:17
+2:Nguyen Van Quang:06/03/1994:Hanoi:ICT:B302:14
+3:Doan Bao Trung:10/09/1989:Hanoi:ICT:B301:16
+4:Pham Ha An:14/12/1995:Hanoi:ICT:B208:15
+5:Dao Hoang Anh:01/12/1995:Hanoi:ICT:B205:15
+6:Tran Phan Anh:21/05/1995:Hanoi:ICT:B205:15
+7:Nghiem Viet Cuong:01/01/1995:Hanoi:ICT:B205:15
+8:Dang Tran Khanh Duong:29/01/1995:Hanoi:ICT:B205:15
+9:Nguyen Hong Dang:09/02/1995:Hanoi:ICT:B205:15
+10:Nguyen Hong Duc:22/10/1995:Hanoi:ICT:B205:15
+11:Do Duc Hieu:23/10/1995:Hanoi:ICT:B205:15
+12:Tran Trung Hieu:07/06/1995:Hanoi:ICT:B205:15
+13:Nguyen Dang Hoa:04/11/1995:Hanoi:ICT:B205:15
+14:Vu Hoang:13/09/1995:Hanoi:ICT:B205:15
+15:Ta Quang Huy:13/09/1995:Hanoi:ICT:B205:15
+16:Nguyen Gia Khang:15/11/1995:Hanoi:ICT:B205:15
+17:Nguyen Nhu Khoa:22/09/1995:Hanoi:ICT:B205:15
+18:Dang Vu Lam:25/12/1995:Hanoi:ICT:B205:15
+19:Nguyen Thi Thu Linh:28/02/1991:Hanoi:ICT:B205:15
+20:Phung Ngoc Minh:02/08/1995:Hanoi:ICT:B205:15
+21:Cao Xuan Ngoc:10/09/1995:Hanoi:ICT:B204:7
+22:Nguyen Trong Nhan:10/01/1995:Hanoi:ICT:B203:8
+23:Nguyen Van Nhat:23/01/1995:Hanoi:ICT:B201:4
+24:Cao Anh Quan:22/12/1995:Hanoi:ICT:B205:9
+25:Nguyen Thanh Son:17/01/1995:Hanoi:ICT:B207:14
+26:Vu Tung son:03/10/1995:Hanoi:Bio:B206:17
+27:Nguyen Duc Thang:08/02/1995:Hanoi:ICT:B207:15
+28:Nguyen Mai Trang:13/09/1995:Hanoi:ICT:B202:13
+29:Hoang Anh Tu:10/02/1995:Hanoi:ICT:B208:14
+30:Do Quoc Tuan:26/06/1995:Hanoi:ICT:B207:15
+31:Nguyen Minh Tuan:09/10/1995:Hanoi:ICT:B206:14
+32:Nguyen Minh Tuan:24/11/1995:Hanoi:ICT:B203:15
+33:Do Son Tung:06/10/1995:Hanoi:ICT:B205:17
+34:Nguyen Thanh Tung:03/06/1995:Bac Binh:Space:B206:13
+35:Truong Tuan Ngoc:24/07/1995:Hanoi:Space:B203:17
+36:Duong Hong Phong:23/8/1995:Hanoi:Nano:B205:15
+37:Pham Vuong Quynh An:25/10/1995:Hanoi:Bio:B206:17
+38:Hoang Huong Giang:28/04/1996:Hanoi:Bio:B102:15
+39:Tran Huu Thanh:24/07/1995:Hanoi:WEO:B206:12
+40:Tran Phuong Thao:14/11/1995:Hanoi:Bio:B207:14
+41:To Hoang Nguyen:16/04/1995:Hai Phong:WEO:B203:16
+42.Thai Tuyet Ngan:15/09/1995:Hanoi:Bio:B201:13
+43.Nguyen Tran Binh Minh:12/08/1995:HCM:Bio:B202:13
+44.Nguyen Viet Dung:20/09/1995:Hanoi:RE:B201:15
+45.Tran Khanh Linh:25/07/1995:Hanoi:RE:B202:17
+46:Bui Xuan Thai:02/09/1995:Hanoi:Bio:B205:14
+47:Phan Ha Duong:09/03/1995:Hanoi:Nano:B203:15
+48:Ngo Van Lap:07/10/1995:Hue:Nano:B206:18
+49:Nguyen Quang Hung:19/10/1995:Hanoi:Re:B203:19
+50:Bach Ngoc My:15/09/1990:Hanoi:Bio:B205:14
+51:Nguyen Thi Minh Hoi:10/06/1995:Hanoi:Bio:B208:13
+52:Nguyen Thanh Phuong:09/06/1995:Hanoi:Bio:B207:14
+53:Duong Viet Linh:28/03/19095:Hanoi:Bio:B204:13
+54:Tran Hong Nhung:16/12/1995:Hanoi:Nano:B205:13
+55:Truong Thi Thanh Loan:13/03/1995:Quang Binh:Nano:B205:17
+56:Pham Quoc Trung:17/08/1995:HCM:Space:B203:14
+57:Pham Thanh Hai:19/08/10995:Hanoi:Bio:B202:13
+58:Nguyen Thu Trang:24/05/1995:Hanoi:RE:B202:15
+59:Pham Quang Minh:21/10/1995:Hanoi:RE:B208:13
+60:Tran Phan Hung:27/12/1995:Hanoi:WEO:B204:12
